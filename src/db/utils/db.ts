@@ -11,6 +11,8 @@ export const t_db = {
         competitions: createInsertSchema(table.competitionsTable),
         competition_participants: createInsertSchema(table.CompetitionParticipants),
         groups: createInsertSchema(table.GroupTable),
+        group_members: createInsertSchema(table.GroupMemberTable),
+        posts: createInsertSchema(table.PostTable),
     },
     select: {
         user: createSelectSchema(table.usersTable),
@@ -18,6 +20,8 @@ export const t_db = {
         competitions: createSelectSchema(table.competitionsTable),
         competition_participants: createSelectSchema(table.CompetitionParticipants),
         groups: createSelectSchema(table.GroupTable),
+        group_members: createSelectSchema(table.GroupMemberTable),
+        posts: createSelectSchema(table.PostTable),
     },
     update: {
         user: createUpdateSchema(table.usersTable),
@@ -25,5 +29,7 @@ export const t_db = {
         competitions: createUpdateSchema(table.competitionsTable),
         competition_participants: createUpdateSchema(table.CompetitionParticipants),
         groups: createUpdateSchema(table.GroupTable),
+        group_members: createUpdateSchema(table.GroupMemberTable),
+        posts: createUpdateSchema(table.PostTable),
     }
 } as const
