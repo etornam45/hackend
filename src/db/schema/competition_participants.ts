@@ -11,8 +11,7 @@ export const CompetitionParticipants = pgTable('competition_participants', {
     competition_id: integer('competition_id').references(() => competitionsTable.id),
     joined_at: timestamp("joined_at").defaultNow(),
     status: CompetitionParticipantsStatus('status').default("Registered")
-}, (t) => [unique('user_single_comp').on(t.user_id, t.competition_id)]
-)
+}, (t) => [unique('user_single_comp').on(t.user_id, t.competition_id)])
 
 
 export const CompetitionParticipantsRelation = relations(CompetitionParticipants, ({ one }) => ({
