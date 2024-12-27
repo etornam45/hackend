@@ -43,10 +43,10 @@
 - [ ] DELETE /groups/{groupId}
 
 ### Group Membership
-- [ ] POST /groups/{groupId}/members
-- [ ] GET /groups/{groupId}/members
-- [ ] PUT /groups/{groupId}/members/{userId}/role
-- [ ] DELETE /groups/{groupId}/members/{userId}
+- [x] POST /groups/{groupId}/members
+- [x] GET /groups/{groupId}/members
+- [x] PUT /groups/{groupId}/members/{userId}/role
+- [x] DELETE /groups/{groupId}/members/{userId}
 
 ## Spaces
 ### Space Management

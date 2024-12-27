@@ -8,10 +8,12 @@ import { users } from "./routes/users";
 import { competitions } from "./routes/competitions";
 import { spaces } from "./routes/space";
 import { groups } from "./routes/groups";
+import { home } from "./routes";
+import { posts } from "./routes/posts";
 
 
 
-const app = new Elysia()
+export const app = new Elysia()
   .use(cors())
   .use(swagger())
   .use(AuthenticationPlugin)
@@ -20,7 +22,8 @@ const app = new Elysia()
   .use(competitions)
   .use(spaces)
   .use(groups)
-  .get("/", ({ redirect }) => redirect("/swagger"))
+  .use(posts)
+  .use(home)
   .listen(3000);
 
 console.log(
