@@ -6,6 +6,6 @@ RUN bun install
 ARG PORT
 EXPOSE ${PORT:-3000}
 
-RUN npx drizzle-kit push
+RUN bunx drizzle-kit push
 
 CMD ["bun", "run", "start"]
