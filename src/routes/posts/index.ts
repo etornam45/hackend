@@ -141,7 +141,7 @@ export const posts = new Elysia({
         }
 
         return {
-            message: "Post deleted successfully",
+            message: "Post deleted successfully", 
             data: deletedPost[0]
         }
     }, {
