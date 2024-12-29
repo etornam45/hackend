@@ -27,7 +27,7 @@ Hackend is a web-based platform designed to streamline the process of hosting an
 
 ## Tech Stack
 
-- **Frontend:** Built with [Remix][https://remix.run] for a fast and reactive user experience.
+- **Frontend:** Built with [Remix](https://remix.run) for a fast and reactive user experience.
 - **Backend:** Powered by [Bun](https://bun.sh) for optimal performance and rapid development.
 
 
