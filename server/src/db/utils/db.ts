@@ -13,6 +13,7 @@ export const t_db = {
         groups: createInsertSchema(table.GroupTable),
         group_members: createInsertSchema(table.GroupMemberTable),
         posts: createInsertSchema(table.PostTable),
+        comments: createInsertSchema(table.CommentTable)
     },
     select: {
         user: createSelectSchema(table.usersTable),
@@ -22,6 +23,7 @@ export const t_db = {
         groups: createSelectSchema(table.GroupTable),
         group_members: createSelectSchema(table.GroupMemberTable),
         posts: createSelectSchema(table.PostTable),
+        comments: createSelectSchema(table.CommentTable),
     },
     update: {
         user: createUpdateSchema(table.usersTable),
@@ -31,5 +33,6 @@ export const t_db = {
         groups: createUpdateSchema(table.GroupTable),
         group_members: createUpdateSchema(table.GroupMemberTable),
         posts: createUpdateSchema(table.PostTable),
+        comments: createUpdateSchema(table.CommentTable),
     }
 } as const

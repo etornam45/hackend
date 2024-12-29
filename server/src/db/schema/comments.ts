@@ -1,7 +1,7 @@
-import { integer, pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { AnyPgColumn, integer, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import { PostTable } from "./posts";
 import { usersTable } from "./users";
-import { relations } from "drizzle-orm";
+import { aliasedTable, relations } from "drizzle-orm";
 
 export const CommentTable = pgTable("comment", {
     id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
@@ -10,7 +10,7 @@ export const CommentTable = pgTable("comment", {
     contnent: text("contnent").notNull(),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at") .defaultNow(),
-    parent_comment: integer("parent_comment"),
+    parent_comment: integer("parent_comment").references((): AnyPgColumn => CommentTable.id),
 })
 
 export const CommentRelations = relations(CommentTable, ({many, one}) => ({

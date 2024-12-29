@@ -10,6 +10,7 @@ import { spaces } from "./routes/space";
 import { groups } from "./routes/groups";
 import { home } from "./routes";
 import { posts } from "./routes/posts";
+import { comment_management } from "./routes/comment/comment";
 
 
 
@@ -23,6 +24,7 @@ export const app = new Elysia()
   .use(spaces)
   .use(groups)
   .use(posts)
+  .use(comment_management)
   .use(home)
   .listen(3000);
 
