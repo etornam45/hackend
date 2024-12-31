@@ -1,5 +1,6 @@
-import { defineConfig, presetUno } from 'unocss'
+import { defineConfig, presetUno, transformerVariantGroup } from 'unocss'
 import presetIcons from '@unocss/preset-icons'
+import presetWebFonts from '@unocss/preset-web-fonts'
 
 
 export default defineConfig({
@@ -11,5 +12,14 @@ export default defineConfig({
                 'vertical-align': 'middle',
             },
         }),
+        presetWebFonts({
+            provider: 'google',
+            fonts: {
+                mono: ['JetBrains Mono', 'Fira Code', 'Fira Mono:400,700'],
+            },
+        }),
+    ],
+    transformers: [
+        transformerVariantGroup(),
     ],
 })

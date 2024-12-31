@@ -5,14 +5,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
-import 'virtual:uno.css'
-import "./root.css";
-import reset from '@unocss/reset/tailwind.css'
 
-export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: reset },
-];
+import  './root.css'
+import  'virtual:uno.css'
+import  '@unocss/reset/tailwind.css'
+import { NavBar } from "./components/nav-bar";
+import { FloatingBlur } from "./ui/blur-floating";
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,11 +19,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />  
         <Meta />
         <Links />
       </head>
-      <body className="dark">
+      <body className="dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-mono relative">
+        <NavBar />
         {children}
+        <FloatingBlur />
         <ScrollRestoration />
         <Scripts />
       </body>

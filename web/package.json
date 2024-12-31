@@ -11,13 +11,15 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@remix-run/node": "^2.15.2",
     "@remix-run/react": "^2.15.2",
     "@remix-run/serve": "^2.15.2",
     "@unocss/reset": "^0.65.3",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@iconify-json/proicons": "^1.2.11",
@@ -27,6 +29,8 @@
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "@unocss/preset-icons": "^0.65.3",
+    "@unocss/preset-web-fonts": "^0.65.3",
+    "@unocss/transformer-variant-group": "^0.65.3",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.38.0",
     "eslint-import-resolver-typescript": "^3.6.1",
