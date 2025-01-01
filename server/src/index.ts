@@ -15,7 +15,9 @@ import { comment_management } from "./routes/comment/comment";
 
 
 export const app = new Elysia()
-  .use(cors())
+  .use(cors({
+    origin: ["https://hackend.vercel.app", "http://localhost:5173"]
+  }))
   .use(swagger())
   .use(AuthenticationPlugin)
   .use(auth)
