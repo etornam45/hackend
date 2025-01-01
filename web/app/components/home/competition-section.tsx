@@ -7,7 +7,7 @@ export const CompetitionsSection = () => {
         <div className="my-[100px]">
 
             <h2 className="mb-6 text-2xl font-bold">Hackathons for you</h2>
-            <div className="grid gap-5 grid-cols-2">
+            <div className="grid gap-5 grid-cols-2 mt-6">
                 <CompetitionCard />
                 <CompetitionCard />
                 <CompetitionCard />
@@ -15,7 +15,7 @@ export const CompetitionsSection = () => {
                 <CompetitionCard />
                 <CompetitionCard />
             </div>
-            <a href="/competition" className="mt-6">
+            <a href="/competition" className="">
                 <Button>
                     View all hackathons
                 </Button>
