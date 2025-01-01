@@ -13,7 +13,7 @@ export const Float = ({ children, action }: Props) => {
     const popupRef = useRef<HTMLDivElement | null>(null);
     const popperInstance = useRef<ReturnType<typeof createPopper> | null>(null);
 
-    const { index, float, toggle } = useFloat()
+    const { index, float, toggle, setFloat } = useFloat()
 
     useEffect(() => {
         if (float == false) {
@@ -51,7 +51,7 @@ export const Float = ({ children, action }: Props) => {
 
     function handleClick() {
         setActive((prev) => !prev);
-        toggle()
+        setFloat(true)
     }
 
     return (
@@ -68,7 +68,7 @@ export const Float = ({ children, action }: Props) => {
                     zIndex: active ? 1000 : "auto",
                 }}
             >
-                <div className="bg-white/50 dark:bg-slate-700/50 backdrop-blur-2xl backdrop-saturate-[2] rounded-2xl mt-2 shadow-2xl">
+                <div className="bg-white/50 dark:bg-slate-700/50 backdrop-blur-3xl backdrop-saturate-[2] rounded-2xl mt-2 shadow-2xl">
                     <div className="context min-w-[200px] border-1.5 dark:border-[#222] rounded-2xl p-2">
                         {children}
                     </div>
