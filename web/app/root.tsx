@@ -6,11 +6,12 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import  './root.css'
-import  'virtual:uno.css'
-import  '@unocss/reset/tailwind.css'
+import 'virtual:uno.css'
+import './root.css'
+import '@unocss/reset/tailwind.css'
 import { NavBar } from "./components/nav-bar";
 import { FloatingBlur } from "./ui/blur-floating";
+import { FloatThemeSwitcher } from "./ui/theme-switcher";
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -19,15 +20,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="/favicon.png" />  
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
         <Meta />
         <Links />
       </head>
-      <body className="dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-mono relative">
+      <body className="dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-mono">
         <NavBar />
         {children}
         <FloatingBlur />
         <ScrollRestoration />
+        <div className="fixed bottom-5 right-5">
+          <FloatThemeSwitcher />
+        </div>
         <Scripts />
       </body>
     </html>
