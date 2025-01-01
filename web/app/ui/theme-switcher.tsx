@@ -22,20 +22,20 @@ export const FloatThemeSwitcher = () => {
 
     return (<Float
         action={
-            <button className="flex items-center  gap-1 p-1 px-3 bg-blue/90 rounded-full text-white">
+            <button className="flex items-center  gap-1 p-1 px-3 bg-blue/90 rounded-full text-white shadow-lg">
                 <div className="i-proicons-dark-theme"></div> Theme
             </button>
         }
     >
-        <div className="flex flex-col ">
-            <div onClick={() => toggle("light")} className="flex first:(rounded-bl-0 rounded-br-0) last:(rounded-tl-0 rounded-tr-0) gap-1.5 items-center p-1.5 cursor-pointer rounded-xl hover:(bg-black/5) dark:hover:(bg-white/5) w-full box-border">
+        <div className="flex flex-col list-hover">
+            <div onClick={() => toggle("light")} className="flex gap-1.5 items-center p-2 py-0.5 cursor-pointer hover:(bg-black/5) dark:hover:(bg-white/5) w-full box-border">
                 <div className="i-proicons-brightness bg-gray-7 dark:bg-gray-2"></div> Light
             </div>
-            <div onClick={() => toggle("dark")} className="flex first:(rounded-bl-0 rounded-br-0) last:(rounded-tl-0 rounded-tr-0) gap-1.5 items-center p-1.5 cursor-pointer rounded-0 hover:(bg-black/5) dark:hover:(bg-white/5) w-full box-border">
+            <div onClick={() => toggle("dark")} className="flex gap-1.5 items-center p-2 py-0.5 cursor-pointer hover:(bg-black/5) dark:hover:(bg-white/5) w-full box-border">
                 <div className="i-proicons-moon bg-gray-7 dark:bg-gray-2"></div> Dark
             </div>
-            <div onClick={() => toggle("dark")} className="flex first:(rounded-bl-0 rounded-br-0) last:(rounded-tl-0 rounded-tr-0) gap-1.5 items-center p-1.5 cursor-pointer rounded-xl hover:(bg-black/5) dark:hover:(bg-white/5) w-full box-border">
-                <div className="i-proicons-computer bg-gray-7 dark:bg-gray-2"></div> System
+            <div  onClick={() => toggle("dark")} className="flex gap-1.5 items-center p-2 py-0.5 cursor-pointer hover:(bg-black/5) dark:hover:(bg-white/5) w-full box-border">
+                <div className="i-proicons-laptop bg-gray-7 dark:bg-gray-2"></div> System
             </div>
         </div>
     </Float>)
