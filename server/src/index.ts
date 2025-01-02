@@ -33,3 +33,6 @@ export const app = new Elysia()
 console.log(
   `🦊 Elysia is running at ${app.server?.url}`
 );
+
+
+export type App = typeof app;
