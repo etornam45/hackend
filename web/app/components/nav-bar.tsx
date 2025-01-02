@@ -3,6 +3,7 @@ import { Logo } from "~/ui/logo";
 import { FloatThemeSwitcher, ThemeSwitcher } from "~/ui/theme-switcher";
 import { Section } from "./section";
 import { Button } from "~/ui/button";
+import { Modal } from "~/ui/modal";
 
 export const NavBar = () => {
     return (
@@ -18,9 +19,15 @@ export const NavBar = () => {
                             </li>
                         ))}
                     </ul>
-                    <Button>
-                        Register
-                    </Button>
+                    <Modal
+                        title={"Authentication"}
+                        action={<Button>
+                            Register
+                        </Button>}>
+                        <div>
+                            Hello
+                        </div>
+                    </Modal>
                 </div>
             </Section>
         </nav>
