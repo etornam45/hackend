@@ -1,11 +1,11 @@
-import { t_db } from "@/db/utils/db";
-import { AuthenticationPlugin } from "@/plugins/authentication";
+import { t_db } from "$/db/utils/db";
+import { AuthenticationPlugin } from "$/plugins/authentication";
 import Elysia, { t } from "elysia";
 import { and, eq } from "drizzle-orm";
-import { db } from "@/utils/db";
-import { Spaces } from "@/db/schema/spaces";
-import { UserOwnsCompetition } from "@/utils/controller";
-import { getErrorMessage } from "@/utils/error-codes";
+import { db } from "$/utils/db";
+import { Spaces } from "$/db/schema/spaces";
+import { UserOwnsCompetition } from "$/utils/controller";
+import { getErrorMessage } from "$/utils/error-codes";
 
 const params = t.Object({ competition_id: t.Number() })
 

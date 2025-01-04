@@ -1,5 +1,5 @@
-import { AuthenticationPlugin } from "@/plugins/authentication";
-import { JWT } from "@/utils/jwt";
+import { AuthenticationPlugin } from "$/plugins/authentication";
+import { JWT } from "$/utils/jwt";
 import Elysia from "elysia";
 
 export const refresh_token = new Elysia()

@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
 import 'dotenv/config';
 import { swagger } from '@elysiajs/swagger'
-import { auth } from "@/routes/auth";
+import { auth } from "$/routes/auth";
 import { AuthenticationPlugin } from "./plugins/authentication";
 import { cors } from '@elysiajs/cors'
 import { users } from "./routes/users";
@@ -36,3 +36,17 @@ console.log(
 
 
 export type App = typeof app;
+
+
+// import { treaty } from '@elysiajs/eden'
+// // import type { App } from '@hackend/server/src/index';
+
+// const client = treaty<App>('localhost:3000')
+
+
+// const { data } = await client.auth.login.post({
+//     email: 'navidben45@gmail.com',
+//     password: 'password'
+// })
+
+// console.log(data)

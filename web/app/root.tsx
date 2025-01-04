@@ -25,7 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-mono">
+      <body className="dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-modno">
         <NavBar />
         {children}
         <ModalFloat />

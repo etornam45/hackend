@@ -1,8 +1,8 @@
-import { usersTable } from "@/db/schema/users";
-import { t_db } from "@/db/utils/db";
-import { AuthenticationPlugin } from "@/plugins/authentication";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
+import { usersTable } from "$/db/schema/users";
+import { t_db } from "$/db/utils/db";
+import { AuthenticationPlugin } from "$/plugins/authentication";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
 import { eq } from "drizzle-orm";
 import Elysia, { t } from "elysia";
 

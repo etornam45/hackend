@@ -58,7 +58,7 @@ export const Float = ({ children, action }: Props) => {
         <div className="relative" style={{
             zIndex: active ? index * 2000 : 'initial'
         }}>
-            <div ref={actionRef} onClick={handleClick} className="cursor-pointer">
+            <div ref={actionRef} onClick={handleClick} className="cursor-pointer backdrop-blur-3">
                 {action}
             </div>
             <div

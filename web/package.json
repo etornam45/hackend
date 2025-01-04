@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "@hackend/web",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -20,7 +20,8 @@
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "zustand": "^5.0.2"
+    "zustand": "^5.0.2",
+    "@hackend/server": "workspace:*"
   },
   "devDependencies": {
     "@iconify-json/proicons": "^1.2.11",

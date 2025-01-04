@@ -1,0 +1,8 @@
+{
+    "name": "hackend",
+    "private": true,
+    "workspaces": [
+      "server",
+      "web"
+    ]
+  }

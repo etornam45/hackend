@@ -1,4 +1,4 @@
-import { competitionsTable } from "@/db/schema/competitions";
+import { competitionsTable } from "$/db/schema/competitions";
 import { db } from "./db";
 import { and, eq } from "drizzle-orm";
 

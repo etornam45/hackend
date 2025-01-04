@@ -1,8 +1,8 @@
-import { PostTable } from "@/db/schema/posts";
-import { t_db } from "@/db/utils/db";
-import { AuthenticationPlugin } from "@/plugins/authentication";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
+import { PostTable } from "$/db/schema/posts";
+import { t_db } from "$/db/utils/db";
+import { AuthenticationPlugin } from "$/plugins/authentication";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
 import { d } from "drizzle-kit/index-Z-1TKnbX";
 import { eq } from "drizzle-orm";
 import Elysia, { t } from "elysia";

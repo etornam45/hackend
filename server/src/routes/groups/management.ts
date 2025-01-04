@@ -1,9 +1,9 @@
-import { GroupTable } from "@/db/schema/group";
-import { t_db } from "@/db/utils/db";
-import { AuthenticationPlugin } from "@/plugins/authentication";
-import { UserOwnsCompetition } from "@/utils/controller";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
+import { GroupTable } from "$/db/schema/group";
+import { t_db } from "$/db/utils/db";
+import { AuthenticationPlugin } from "$/plugins/authentication";
+import { UserOwnsCompetition } from "$/utils/controller";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
 import { and, eq } from "drizzle-orm";
 import Elysia, { t } from "elysia";
 

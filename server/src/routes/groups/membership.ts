@@ -1,7 +1,7 @@
-import { GroupMemberTable } from "@/db/schema/group-member";
-import { t_db } from "@/db/utils/db";
-import { AuthenticationPlugin } from "@/plugins/authentication";
-import { db } from "@/utils/db";
+import { GroupMemberTable } from "$/db/schema/group-member";
+import { t_db } from "$/db/utils/db";
+import { AuthenticationPlugin } from "$/plugins/authentication";
+import { db } from "$/utils/db";
 import { and, eq } from "drizzle-orm";
 import Elysia, { t } from "elysia";
 

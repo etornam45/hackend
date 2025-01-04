@@ -1,7 +1,7 @@
-import { usersTable } from "@/db/schema/users";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
-import { JWT } from "@/utils/jwt";
+import { usersTable } from "$/db/schema/users";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
+import { JWT } from "$/utils/jwt";
 import { eq } from "drizzle-orm";
 import Elysia from "elysia";
 

@@ -1,24 +1,26 @@
-import { usersTable } from "@/db/schema/users";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
-import { JWT } from "@/utils/jwt";
+import { usersTable } from "$/db/schema/users";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
+import { JWT } from "$/utils/jwt";
 import { eq } from "drizzle-orm";
 import Elysia, { t } from "elysia";
 
 export const login = new Elysia()
     .use(JWT)
     // login User
-    .post('/login', async ({ body, jwt, cookie: { auth_token }, response }) => {
+    .post('/login', async ({ body, jwt, cookie: { auth_token }, set }) => {
         const user = await db.select().from(usersTable).where(eq(usersTable.email, body.email)).limit(1)
 
         if (user.length === 0) {
+            set.status = 400
             return {
                 ...getErrorMessage("USER_ERRORS", "USER_001"),
                 message: "Sorry, your email was incorrect. Please double-check your email."
             }
         }
-
+        
         if (!Bun.password.verifySync(body.password, user[0].password_hash)) {
+            set.status = 400
             return {
                 ...getErrorMessage("AUTH_ERRORS", "AUTH_001"),
                 message: "Sorry, your password was incorrect. Please double-check your password."

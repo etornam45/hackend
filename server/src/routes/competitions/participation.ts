@@ -6,11 +6,11 @@
     - [ ] `GET /competitions/{competition_id}/submissions`
  */
 
-import { CompetitionParticipants } from "@/db/schema/competition_participants";
-import { t_db } from "@/db/utils/db";
-import { AuthenticationPlugin } from "@/plugins/authentication";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
+import { CompetitionParticipants } from "$/db/schema/competition_participants";
+import { t_db } from "$/db/utils/db";
+import { AuthenticationPlugin } from "$/plugins/authentication";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
 import { eq } from "drizzle-orm";
 import Elysia, { t } from "elysia";
 

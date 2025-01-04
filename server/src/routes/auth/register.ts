@@ -1,6 +1,6 @@
-import { usersTable } from "@/db/schema/users";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
+import { usersTable } from "$/db/schema/users";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
 import Elysia, { t } from "elysia";
 
 

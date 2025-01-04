@@ -4,6 +4,7 @@ import { FloatThemeSwitcher, ThemeSwitcher } from "~/ui/theme-switcher";
 import { Section } from "./section";
 import { Button } from "~/ui/button";
 import { Modal } from "~/ui/modal";
+import { Login } from "./auth-modal";
 
 export const NavBar = () => {
     return (
@@ -22,10 +23,10 @@ export const NavBar = () => {
                     <Modal
                         title={"Authentication"}
                         action={<Button>
-                            Register
+                            Login
                         </Button>}>
                         <div>
-                            Hello
+                        <Login />
                         </div>
                     </Modal>
                 </div>

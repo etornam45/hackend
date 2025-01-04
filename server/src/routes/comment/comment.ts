@@ -1,8 +1,8 @@
-import { CommentTable, replies } from "@/db/schema/comments";
-import { t_db } from "@/db/utils/db";
-import { AuthenticationPlugin } from "@/plugins/authentication";
-import { db } from "@/utils/db";
-import { getErrorMessage } from "@/utils/error-codes";
+import { CommentTable, replies } from "$/db/schema/comments";
+import { t_db } from "$/db/utils/db";
+import { AuthenticationPlugin } from "$/plugins/authentication";
+import { db } from "$/utils/db";
+import { getErrorMessage } from "$/utils/error-codes";
 import { aliasedTable, and, eq, isNull } from "drizzle-orm";
 import Elysia, { t } from "elysia";
 

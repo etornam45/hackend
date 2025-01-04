@@ -1,4 +1,4 @@
-import { AuthenticationPlugin } from "@/plugins/authentication";
+import { AuthenticationPlugin } from "$/plugins/authentication";
 import Elysia from "elysia";
 
 export const logout = new Elysia()
